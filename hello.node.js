@@ -70,3 +70,27 @@ while (iteration > 0) {
     iteration--;
 }
 console.log(tablo);
+
+// Tri par recherche successive du min
+let sortedArray = [];
+iteration = tablo.length;
+isMin = 9999;
+let indice = 0;
+while (iteration > 0) {
+    for (let i = 0; i < tablo.length; i++) {
+        if (isMin > tablo[i]) {
+            isMin = tablo[i];
+            indice = i;
+        }
+    }
+    // Range le minimum dans le nouveau tableau
+    sortedArray.push(isMin);
+    // Dépile la colonne du tableau original
+    tablo.splice(indice, 1);
+
+    // Décrémente l'itérateur
+    iteration--;
+    // Redéfinit le minimum
+    isMin = 9999;
+}
+console.log(sortedArray);
