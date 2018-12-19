@@ -57,7 +57,7 @@ console.log('Valeur maximum : ' + maxIs + ' Minimum : ' + minIs + ' Total : ' + 
 let iteration = tablo.length;
 let begin = 0;
 while (iteration > 0) {
-    for (let i = begin; i < tablo.length; i++) {
+    for (let i = 0; i < iteration; i++) {
         let currentValue = tablo[i];
         let nextValue = tablo[i + 1];
 
